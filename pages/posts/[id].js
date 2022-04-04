@@ -7,7 +7,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 
 // どんなページを表示する可能性があるのか判断
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths = await getAllPostIds()
   return {
     paths,
     fallback: false
